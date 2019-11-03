@@ -11,4 +11,5 @@ sudo apt-key add jcameron-key.asc
 
 # Install Webmin
 sudo apt update
+sudo apt install libnet-ssleay-perl libauthen-pam-perl libio-pty-perl apt-show-versions unzip python -y
 sudo apt install webmin
