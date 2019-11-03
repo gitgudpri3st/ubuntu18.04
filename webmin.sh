@@ -1,9 +1,8 @@
 #/bin/sh
 # Add the Webmin repository
-sudo touch /etc/apt/sources.list
-sudo bash -c 'cat > /etc/apt/sources.list << EOL
+sudo sh -c 'cat << EOF >> /etc/apt/sources.list
 deb http://download.webmin.com/download/repository sarge contrib
-EOL'
+EOF'
 
 # Add key
 wget http://www.webmin.com/jcameron-key.asc
