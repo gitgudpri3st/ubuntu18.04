@@ -34,7 +34,7 @@ server {
 EOL'
 
 IP=$(hostname -I | cut -d' ' -f1)
-sed -i "s/HOST_IP/$IP/g" /etc/ssh/ssh_config
+sed -i "s/HOST_IP/$IP/g" /etc/nginx/sites-available/h5ai
 
 sudo ln -s /etc/nginx/sites-available/h5ai /etc/nginx/sites-enabled/h5ai
 sudo chown -R www-data:www-data /hdd/demo
