@@ -2,7 +2,7 @@ cd /hdd && mkdir demo && cd demo
 wget -N --no-check-certificate https://release.larsjung.de/h5ai/h5ai-0.29.2.zip
 sudo apt install unzip -y && unzip -o h5ai-0.29.2.zip && rm h5ai-0.29.2.zip
 
-HOST_IP=`hostname -I | cut -d' ' -f1`
+HOST_IP=$(`hostname -I | cut -d' ' -f1`)
 
 sudo touch /etc/nginx/sites-available/h5ai
 sudo bash -c 'cat > /etc/nginx/sites-available/h5ai << EOL 
