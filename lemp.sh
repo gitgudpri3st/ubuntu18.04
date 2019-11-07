@@ -16,7 +16,7 @@ server {
         listen 80;
         root /var/www/html;
         index index.php index.html index.htm index.nginx-debian.html;
-        server_name example.com;
+        server_name _;
 
         location / {
                 try_files $uri $uri/ =404;
