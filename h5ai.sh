@@ -7,7 +7,7 @@ sudo touch /etc/nginx/sites-available/h5ai
 sudo bash -c 'cat > /etc/nginx/sites-available/h5ai << EOL 
 server {
     listen 80;
-    server_name HOST_IP;
+    server_name example.com;
     root /hdd/demo;
     index /_h5ai/public/index.php;
     limit_rate 1500k;
@@ -36,8 +36,5 @@ EOL'
 
 sudo ln -s /etc/nginx/sites-available/h5ai /etc/nginx/sites-enabled/h5ai
 sudo chown -R www-data:www-data /hdd/demo
-
-IP=$(hostname -I | cut -d' ' -f1)
-sed -i "s/HOST_IP/$IP/g" /etc/nginx/sites-available/h5ai
 
 sudo systemctl reload nginx.service
